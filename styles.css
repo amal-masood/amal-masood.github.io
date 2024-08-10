@@ -42,6 +42,7 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    text-align: center;
 }
 
 .gallery img {
@@ -49,7 +50,9 @@ h1, h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #ffffff; /* White border for images */
+    border: 0px solid #000000; /* Black border for images */
+    text-align: center;
+    justify-content: center;
 }
 
 footer {
@@ -60,4 +63,5 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    text-align: center;
 }
