@@ -34,23 +34,33 @@ main {
     border-radius: 10px;
 }
 
-h1, h2 {
+h1 {
     color: #ffffff; /* White color for headers */
+    font-size: 68px;
 }
+
+h2 {
+    color: #ffffff; /* White color for headers */
+    text-align: center;
+    font-size: 36px;
+
+}
+
+
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    text-align: center;
+    justify-content: center;
 }
 
 .gallery img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #ffffff; /* white border for images */
+    border-radius: 5px;
+    border: 0px solid #ffffff; /* white border for images */
     text-align: center;
     justify-content: center;
 }
