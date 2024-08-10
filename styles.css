@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #001f3f; /* Navy blue background */
+    background-color: #5A639C; /* purp background */
     color: #ffffff; /* White text color for contrast */
 }
 
 header {
-    background-color: #001f3f; /* Navy blue background */
+    background-color: #5A639C; /* purp background */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -30,7 +30,7 @@ nav ul li a {
 
 main {
     padding: 20px;
-    background-color: #002952; /* Slightly lighter navy for main content */
+    background-color: #7776B3; /* Slightly lighter purp for main content */
     border-radius: 10px;
 }
 
@@ -50,13 +50,13 @@ h1, h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    border: 0px solid #000000; /* Black border for images */
+    border: 2px solid #ffffff; /* white border for images */
     text-align: center;
     justify-content: center;
 }
 
 footer {
-    background-color: #001f3f; /* Navy blue background */
+    background-color: #5A639C; /* purp background */
     color: white;
     text-align: center;
     padding: 10px 0;
