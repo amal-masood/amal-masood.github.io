@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #001f3f; /* Navy blue background */
+    color: #ffffff; /* White text color for contrast */
 }
 
 header {
-    background-color: #333;
+    background-color: #001f3f; /* Navy blue background */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -30,10 +30,12 @@ nav ul li a {
 
 main {
     padding: 20px;
+    background-color: #002952; /* Slightly lighter navy for main content */
+    border-radius: 10px;
 }
 
 h1, h2 {
-    color: #333;
+    color: #ffffff; /* White color for headers */
 }
 
 .gallery {
@@ -47,10 +49,11 @@ h1, h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    border: 2px solid #ffffff; /* White border for images */
 }
 
 footer {
-    background-color: #333;
+    background-color: #001f3f; /* Navy blue background */
     color: white;
     text-align: center;
     padding: 10px 0;
