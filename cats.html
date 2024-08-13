@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars</title>
+    <title>Cat Tax</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="cats-page">
     <header>
-        <h1>Cars</h1>
+        <h1>Cat Tax</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Cats!!!</h2>
-            <div class="gallery">
+        <section class="slideshow-container">
+            <div class="slide fade">
                 <img src="content/cat_images/1.jpg" alt="Cat 1">
-                <img src="content/cat_images/2.jpg" alt="Cat 2">
-                <img src="content/cat_images/3.jpg" alt="Cat 3">
-                <img src="content/cat_images/4.jpg" alt="Cat 4">
-                <img src="content/cat_images/5.jpg" alt="Cat 5">
-                <img src="content/cat_images/6.jpg" alt="Cat 6">
-                <img src="content/cat_images/7.jpg" alt="Cat 7">
-                <img src="content/cat_images/8.jpg" alt="Cat 8">
-                <img src="content/cat_images/9.jpg" alt="Cat 9">
-                <img src="content/cat_images/10.jpg" alt="Cat 10">
-                <img src="content/cat_images/11.jpg" alt="Cat 11">
-                <img src="content/cat_images/12.jpg" alt="Cat 12">
-                <img src="content/cat_images/13.jpg" alt="Cat 13">
-                <img src="content/cat_images/14.jpg" alt="Cat 14">
             </div>
+            <div class="slide fade">
+                <img src="content/cat_images/2.jpg" alt="Cat 2">
+            </div>
+            <div class="slide fade">
+                <img src="content/cat_images/3.jpg" alt="Cat 3">
+            </div>
+            <!-- Add more slides as needed -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Amal Masood. All rights reserved.</p>
+        <h6>&copy; 2024 Amal Masood. All rights reserved.</h6>
+        <h6>Connect with Me</h6>
+        <!-- LinkedIn Sticker Link -->
+        <a href="https://www.linkedin.com/in/amal-masood-076364322/" target="_blank">
+            <img src="content/logos/linkedin.png" alt="Linkedin Sticker" class="sticker">
+        </a>
+        <!-- Add more stickers as needed -->
+        <a href="mailto:amal.masood@metu.edu.tr" target="_blank">
+            <img src="content/logos/email.png" alt="Email Sticker" class="sticker">
+        </a>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
