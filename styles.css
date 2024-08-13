@@ -11,7 +11,7 @@ body {
 header {
     background-color: #E5E3C9; /* background */
     color: #789395;
-    padding: 0;
+    padding: 10px 0;
     text-align: center;
     margin: 0;
     height: auto;
@@ -42,7 +42,7 @@ main {
 
 h6  {
     font-size: 12px;
-    
+    line-height: 0;
 
 }   
 
@@ -74,13 +74,15 @@ footer {
     bottom: 0;
     text-align: center;
     height: auto;
+    margin-right: 5px; /* Space between text and stickers */
+
 }
 
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 500px;
-    max-height: 600px;
+    max-width: 400px;
+    max-height: 500px;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -137,11 +139,10 @@ footer {
 
 
 .sticker {
-    width: 25px; /* Adjust the size as needed */
-    height: auto;
+    width: auto; /* Adjust the size as needed */
+    height: 20px;
     margin: 10px;
     transition: transform 0.3s ease;
-    line-height: 0.5;
 }
 
 .sticker:hover {
@@ -150,4 +151,26 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+
+
+.button {
+    background-color: #E5E3C9; /* Button background color */
+    color: #789395; /* Text color */
+    border: #000000; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    text-align: center; 
+}
+
+.button:hover {
+    background-color: #B4CFB0; /* Darker color on hover */
+}
+
+.button:focus {
+    outline: none; /* Remove default focus outline */
 }
