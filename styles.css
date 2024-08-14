@@ -2,16 +2,16 @@ body {
     font-family: 'Inter Tight', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F5DAD2; /* background */
-    color: #75A47F; /* text */
+    background-color: #FEF3E2; /* background */
+    color: #606676; /* text */
 }
 
 
 
 header {
-    background-color: #F5DAD2; /* background */
-    color: #75A47F;
-    padding: 10px 0;
+    background-color: #FEF3E2; /* background */
+    color: #606676;
+    padding: 0px 0;
     text-align: center;
     margin: 0;
     height: auto;
@@ -28,13 +28,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #75A47F;
+    color: #606676;
     text-decoration: none;
 }
 
 main {
     padding: 50px;
-    background-color: #F5DAD2; /* Slightly lighter purp for main content */
+    background-color: #FEF3E2; /* Slightly lighter purp for main content */
     border-radius: 10px;
     font-size: 24px;
     min-height: auto;
@@ -48,14 +48,14 @@ p {
 
 
 h1 {
-    color: #75A47F; /* green color for headers */
+    color: #606676; /* green color for headers */
     font-size: 60px;
     line-height: 1.2; /* Adjust for headings as needed */
     font-family: 'Bree Serif', serif;
 }
 
 h2 {
-    color: #75A47F; /* lighter green color for headers */
+    color: #606676; /* lighter green color for headers */
     text-align: center;
     font-size: 30px;
     line-height: 1.2; /* Adjust for headings as needed */
@@ -73,8 +73,8 @@ h6  {
 
 
 footer {
-    background-color: #F5DAD2; /* background */
-    color: #75A47F;
+    background-color: #FEF3E2; /* background */
+    color: #606676;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -170,10 +170,10 @@ a {
 
 
 .button {
-    background-color: #F5DAD2; /* Button background color */
-    color: #789395; /* Text color */
+    background-color: #BEC6A0; /* Button background color */
+    color: #606676; /* Text color */
     border: #000000; /* Remove default border */
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     padding: 10px 20px; /* Padding around the text */
     font-size: 20px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
@@ -183,7 +183,7 @@ a {
 }
 
 .button:hover {
-    background-color: #BACD92; /* Darker color on hover */
+    background-color: #708871; /* Darker color on hover */
 }
 
 .button:focus {
