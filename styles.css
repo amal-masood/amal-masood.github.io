@@ -1,16 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter Tight', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E5E3C9; /* background */
-    color: #789395; /* text */
+    background-color: #F5DAD2; /* background */
+    color: #75A47F; /* text */
 }
 
 
 
 header {
-    background-color: #E5E3C9; /* background */
-    color: #789395;
+    background-color: #F5DAD2; /* background */
+    color: #75A47F;
     padding: 10px 0;
     text-align: center;
     margin: 0;
@@ -28,49 +28,53 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #789395;
+    color: #75A47F;
     text-decoration: none;
 }
 
 main {
     padding: 50px;
-    background-color: #B4CFB0; /* Slightly lighter purp for main content */
+    background-color: #F5DAD2; /* Slightly lighter purp for main content */
     border-radius: 10px;
     font-size: 24px;
-    min-height: 1000px;
+    min-height: auto;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Inter Tight', sans-serif;
 
 }  
 
 
 h1 {
-    color: #789395; /* green color for headers */
+    color: #75A47F; /* green color for headers */
     font-size: 60px;
     line-height: 1.2; /* Adjust for headings as needed */
+    font-family: 'Bree Serif', serif;
 }
 
 h2 {
-    color: #789395; /* lighter green color for headers */
+    color: #75A47F; /* lighter green color for headers */
     text-align: center;
     font-size: 30px;
     line-height: 1.2; /* Adjust for headings as needed */
+    font-family: 'Bree Serif', serif;
 
 }
 
 h6  {
     font-size: 12px;
     line-height: 0;
+    font-family: 'Inter Tight', sans-serif;
 
 } 
 
 
 
 footer {
-    background-color: #E5E3C9; /* background */
-    color: #789395;
+    background-color: #F5DAD2; /* background */
+    color: #75A47F;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -89,8 +93,8 @@ footer {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -166,7 +170,7 @@ a {
 
 
 .button {
-    background-color: #E5E3C9; /* Button background color */
+    background-color: #F5DAD2; /* Button background color */
     color: #789395; /* Text color */
     border: #000000; /* Remove default border */
     border-radius: 10px; /* Rounded corners */
@@ -174,13 +178,15 @@ a {
     font-size: 20px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
-    text-align: center; 
+    text-align: center;
+    font-family: 'Inter Tight', sans-serif;
 }
 
 .button:hover {
-    background-color: #B4CFB0; /* Darker color on hover */
+    background-color: #BACD92; /* Darker color on hover */
 }
 
 .button:focus {
     outline: none; /* Remove default focus outline */
 }
+
