@@ -30,18 +30,20 @@ nav ul li {
 nav ul li a {
     color: #606676;
     text-decoration: none;
+    font-size: 16px;
 }
 
 main {
-    padding: 50px;
-    background-color: #FEF3E2; /* Slightly lighter purp for main content */
+    padding: 5px;
+    background-color: #BEC6A0; /* Slightly lighter purp for main content */
     border-radius: 10px;
     font-size: 24px;
     min-height: auto;
+    margin: 0;
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Inter Tight', sans-serif;
 
 }  
@@ -55,11 +57,23 @@ h1 {
 }
 
 h2 {
-    color: #606676; /* lighter green color for headers */
+    color: #708871; /* lighter green color for headers */
     text-align: center;
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.2; /* Adjust for headings as needed */
     font-family: 'Bree Serif', serif;
+    border-bottom: 2px dashed; #606676; /* Adjust the color and thickness */
+    padding-bottom: 1px; /* Add some space between the text and the line */
+    margin-bottom: 10px; /* Add some space below the line */
+
+}
+
+h3 {
+    color: #606676; /* lighter green color for headers */
+    font-size: 24px;
+    line-height: 1.2; /* Adjust for headings as needed */
+    font-family: 'Inter Tight', sans-serif;
+
 
 }
 
@@ -93,8 +107,8 @@ footer {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -132,11 +146,18 @@ footer {
     user-select: none;
 }
 
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
 /* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
+
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -189,4 +210,6 @@ a {
 .button:focus {
     outline: none; /* Remove default focus outline */
 }
+
+
 

@@ -31,3 +31,19 @@ function autoSlides() {
     slides[slideIndex-1].style.display = "block";  
     autoSlideTimer = setTimeout(autoSlides, 3000); // Change slide every 3 seconds
 }
+
+
+function launchConfetti() {
+    confetti({
+        particleCount: 500,
+        spread: 1000,
+        origin: { y: 0.5 }
+    });
+}
+
+window.onload = function() {
+    launchConfetti();
+};
+
+
+
