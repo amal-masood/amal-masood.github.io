@@ -225,12 +225,26 @@ a {
         align-items: flex-start; /* Align items to the start */
     }
 
-    h1, h2 {
+    h1 {
+        font-size: 30px; /* Adjust heading sizes for smaller screens */
+    }
+
+    h2, h3 {
         font-size: 24px; /* Adjust heading sizes for smaller screens */
+    }
+
+    p {
+        font-size: 16px; /* Adjust heading sizes for smaller screens */
     }
 
     .slideshow-container {
         max-width: 100%; /* Make the slideshow full width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
     }
 
     nav ul {
