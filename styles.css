@@ -242,6 +242,10 @@ a {
         font-size: 20px; /* Adjust heading sizes for smaller screens */
     }
 
+    ul, ol {
+    font-size: 16px; /* Adjust the size as needed */
+}
+
     .slideshow-container {
         max-width: 100%; /* Make the slideshow full width */
         display: flex;
