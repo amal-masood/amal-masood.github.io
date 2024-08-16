@@ -1,8 +1,17 @@
 let slideIndex = 1;
 let autoSlideTimer;
 
-showSlides(slideIndex);
-autoSlides();
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    console.log(`Showing slide ${slideIndex}`);
+    slides[slideIndex - 1].style.display = "block";
+}
 
 function plusSlides(n) {
     clearTimeout(autoSlideTimer); // Stop the auto slide timer
@@ -10,27 +19,22 @@ function plusSlides(n) {
     autoSlides(); // Restart the auto slide timer after manual navigation
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slides[slideIndex-1].style.display = "block";  
-}
-
 function autoSlides() {
     let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+    if (slides.length === 0) return; // Prevent autoSlides if no slides are present
+
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
+    if (slideIndex > slides.length) { slideIndex = 1; }    
+    showSlides(slideIndex);  
     autoSlideTimer = setTimeout(autoSlides, 3000); // Change slide every 3 seconds
 }
+
+// Initialize slideshow
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides(slideIndex); // Show the first slide
+    autoSlides(); // Start the automatic slideshow
+});
+
 
 
 function launchConfetti() {
