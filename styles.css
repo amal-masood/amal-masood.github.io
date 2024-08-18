@@ -112,11 +112,16 @@ footer {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 450px;
-    height: 450px;
+    /*width: 400px;
+    height: 400px;*/
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content */
+    justify-content: center;
+    width: 40%;
 }
 
 /* Hide the images by default */
@@ -149,7 +154,9 @@ footer {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 1000; /* Ensure the buttons are on top of other elements */
 }
+
 
 .prev {
     left: 0;
@@ -174,6 +181,18 @@ footer {
     width: 100%;
     border-radius: 10px;
 }
+
+
+.slide {
+    text-align: center; /* Centers the image and text */
+}
+
+.description {
+    margin-top: 5px; /* Adds space between the image and the description */
+    font-size: 16px;
+    color: #606676; /* Adjust the color as needed */
+}
+
 
 
 .sticker {
