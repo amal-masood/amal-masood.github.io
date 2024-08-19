@@ -42,7 +42,8 @@ main {
     background-color: #BEC6A0;
     border-radius: 10px;
     font-size: 24px;
-    width: 100%; /* Allow the main section to expand as needed */
+    width: auto; /* Allow the main section to expand as needed */
+    height: auto;
     margin: 0 auto; /* Center the main section */
 }
 
@@ -109,8 +110,8 @@ footer {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 400px; /* Set a fixed width */
-    min-height: 400px; /* Set a fixed height */
+    width: 500px; /* Set a fixed width */
+    min-height: 500px; /* Set a fixed height */
     margin: auto;
     border-radius: 10px;
     overflow: visible;
@@ -145,7 +146,8 @@ footer {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: #606676;
+    opacity: 0.6;
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
@@ -170,12 +172,13 @@ footer {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: #708871 ;
 }
 
 /* Images in the slideshow */
 .slide img {
-    width: 100%;
+    width: auto;
+    height: 400px;
     border-radius: 10px;
 }
 

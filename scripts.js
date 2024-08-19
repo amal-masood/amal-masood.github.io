@@ -5,7 +5,7 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slide");
 
-    // Handle out-of-bound slide index values
+    // Wrap slide index to the first or last slide if out of bounds
     if (n > slides.length) { 
         slideIndex = 1; 
     } else if (n < 1) { 
@@ -17,7 +17,7 @@ function showSlides(n) {
         slides[i].style.display = "none";  
     }
 
-    // Display the correct slide
+    // Show the current slide
     console.log(`Showing slide ${slideIndex}`);
     slides[slideIndex - 1].style.display = "block";
 }
@@ -25,10 +25,23 @@ function showSlides(n) {
 function plusSlides(n) {
     console.log(`Button clicked with value: ${n}`);
     clearTimeout(autoSlideTimer); // Stop the auto slide timer
-    slideIndex += n;
-    showSlides(slideIndex);
-    autoSlides(); // Restart the auto slide timer after manual navigation
+    
+    slideIndex += n; // Update slideIndex based on button click
+    console.log(`Updated slideIndex: ${slideIndex}`); // Log the new slideIndex
+
+    // Check boundaries to wrap around if necessary
+    if (slideIndex > document.getElementsByClassName("slide").length) {
+        slideIndex = 1; 
+    } else if (slideIndex < 1) {
+        slideIndex = document.getElementsByClassName("slide").length;
+    }
+
+    console.log(`Final slideIndex after bounds check: ${slideIndex}`); // Log final slideIndex after boundary check
+    
+    showSlides(slideIndex); // Show the updated slide
+    autoSlides(); // Restart auto slide after manual navigation
 }
+
 
 function autoSlides() {
     let slides = document.getElementsByClassName("slide");
