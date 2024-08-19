@@ -38,14 +38,14 @@ ul, ol {
 }
 
 main {
-    padding: 5px;
-    background-color: #BEC6A0; /* Slightly lighter purp for main content */
+    padding: 20px; /* Adds padding around the content */
+    background-color: #BEC6A0;
     border-radius: 10px;
     font-size: 24px;
-    min-height: auto;
-    width: auto;
-    margin: 0;
+    width: auto; /* Allow the main section to expand as needed */
+    margin: 0 auto; /* Center the main section */
 }
+
 
 p {
     font-size: 20px;
@@ -104,25 +104,22 @@ footer {
     height: auto;
     margin-right: 5px; /* Space between text and stickers */
     position: static; /* Ensure footer is positioned relative to content */
-    width: 100%; /* Full width */
-    min-height: 100%;
-
 }
 
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 400px;
-    height: auto;
+    width: 400px; /* Set a fixed width */
+    min-height: 400px; /* Set a fixed height */
     margin: auto;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content */
+    align-items: center;
     justify-content: center;
-/*    width: 40%;*/
 }
+
 
 /* Hide the images by default */
 .slide {
@@ -185,12 +182,17 @@ footer {
 
 .slide {
     text-align: center; /* Centers the image and text */
+    display: block; /* Ensure it is visible */
+    height: auto;
 }
 
 .description {
-    margin-top: 5px; /* Adds space between the image and the description */
-    font-size: 16px;
-    color: #606676; /* Adjust the color as needed */
+    margin-top: 5px;
+    font-size: 14px;
+    color: #606676;
+    max-height: none; /* Allow description to expand */
+    overflow: visible; /* Allow content to be visible */
+    text-align: center; /* Center the text */
 }
 
 
