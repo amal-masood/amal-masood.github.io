@@ -43,7 +43,6 @@ main {
     border-radius: 10px;
     font-size: 24px;
     width: auto; /* Allow the main section to expand as needed */
-    height: auto;
     margin: 0 auto; /* Center the main section */
 }
 
@@ -111,10 +110,10 @@ footer {
 .slideshow-container {
     position: relative;
     width: 400px; /* Set a fixed width */
-    min-height: 400px; /* Set a fixed height */
+    height: 400px; /* Set a fixed height */
     margin: auto;
     border-radius: 10px;
-    overflow: visible;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,8 +145,7 @@ footer {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: #606676;
-    opacity: 0.6;
+    color: white;
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
@@ -172,30 +170,24 @@ footer {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: #708871 ;
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* Images in the slideshow */
 .slide img {
-    width: auto;
-    height: 400px;
+    width: 100%;
     border-radius: 10px;
 }
 
 
 .slide {
     text-align: center; /* Centers the image and text */
-    display: block; /* Ensure it is visible */
-    height: auto;
 }
 
 .description {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #606676;
-    max-height: none; /* Allow description to expand */
-    overflow: visible; /* Allow content to be visible */
-    text-align: center; /* Center the text */
+    margin-top: 5px; /* Adds space between the image and the description */
+    font-size: 12px;
+    color: #606676; /* Adjust the color as needed */
 }
 
 
@@ -293,8 +285,7 @@ a {
         align-items: center;
         margin: auto;
         text-align: center;
-        overflow: visible;
-        border-radius: 10px;
+        overflow: hidden;
     }
 
     nav ul {
