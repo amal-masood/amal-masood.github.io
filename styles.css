@@ -42,7 +42,7 @@ main {
     background-color: #BEC6A0;
     border-radius: 10px;
     font-size: 24px;
-    width: auto; /* Allow the main section to expand as needed */
+    width: 100%; /* Allow the main section to expand as needed */
     margin: 0 auto; /* Center the main section */
 }
 
