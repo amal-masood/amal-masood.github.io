@@ -1,75 +1,83 @@
 let slideIndex = 1;
 let autoSlideTimer;
 
+// Show the slides based on the index
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
+    const slides = document.getElementsByClassName("slide");
 
-    // Wrap slide index to the first or last slide if out of bounds
-    if (n > slides.length) { 
-        slideIndex = 1; 
-    } else if (n < 1) { 
-        slideIndex = slides.length; 
-    }
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
 
-    // Hide all slides
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-
-    // Show the current slide
-    console.log(`Showing slide ${slideIndex}`);
+    Array.from(slides).forEach(slide => slide.style.display = "none");
     slides[slideIndex - 1].style.display = "block";
 }
 
+// Navigate to the next or previous slide
 function plusSlides(n) {
-    console.log(`Button clicked with value: ${n}`);
     clearTimeout(autoSlideTimer); // Stop the auto slide timer
-    
-    slideIndex += n; // Update slideIndex based on button click
-    console.log(`Updated slideIndex: ${slideIndex}`); // Log the new slideIndex
 
-    // Check boundaries to wrap around if necessary
-    if (slideIndex > document.getElementsByClassName("slide").length) {
-        slideIndex = 1; 
-    } else if (slideIndex < 1) {
-        slideIndex = document.getElementsByClassName("slide").length;
-    }
+    slideIndex += n;
+    if (slideIndex > document.getElementsByClassName("slide").length) slideIndex = 1;
+    if (slideIndex < 1) slideIndex = document.getElementsByClassName("slide").length;
 
-    console.log(`Final slideIndex after bounds check: ${slideIndex}`); // Log final slideIndex after boundary check
-    
-    showSlides(slideIndex); // Show the updated slide
+    showSlides(slideIndex);
     autoSlides(); // Restart auto slide after manual navigation
 }
 
-
+// Automatically cycle through slides
 function autoSlides() {
-    let slides = document.getElementsByClassName("slide");
-    if (slides.length === 0) return; // Prevent autoSlides if no slides are present
-
     slideIndex++;
-    if (slideIndex > slides.length) { 
-        slideIndex = 1; 
-    }
+    if (slideIndex > document.getElementsByClassName("slide").length) slideIndex = 1;
 
-    showSlides(slideIndex);  
+    showSlides(slideIndex);
     autoSlideTimer = setTimeout(autoSlides, 5000); // Change slide every 5 seconds
 }
+
+// Shuffle slides
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    
+    // Convert NodeList to Array
+    const slidesArray = Array.from(slides);
+    
+    // Shuffle function
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    
+    // Shuffle slides
+    shuffle(slidesArray);
+    
+    // Clear existing slides
+    slideshowContainer.innerHTML = '';
+    
+    // Append shuffled slides
+    slidesArray.forEach(slide => slideshowContainer.appendChild(slide));
+    
+    // Reinsert buttons
+    slideshowContainer.appendChild(prevButton);
+    slideshowContainer.appendChild(nextButton);
+});
+
 
 // Initialize slideshow
 document.addEventListener("DOMContentLoaded", () => {
     showSlides(slideIndex); // Show the first slide
     autoSlides(); // Start the automatic slideshow
+    shuffleSlides(); // Shuffle slides
 });
 
-function launchConfetti() {
+// Launch confetti on window load
+window.onload = function() {
     confetti({
         particleCount: 500,
         spread: 1000,
         origin: { y: 0.5 }
     });
-}
-
-window.onload = function() {
-    launchConfetti();
 };
